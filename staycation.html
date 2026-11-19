@@ -25,14 +25,72 @@
                 padding-right:200px;
                 font-family:Georgia, 'Times New Roman', Times, serif
             }
+            .pic1{
+                width:250px;
+                border:solid #cccacf;
+                border-width:5px;
+                border-radius: 5%;
+            }
+            .rotate1{
+
+            }
+            .hotels{
+                padding-right:85%;
+            }
+            .button{
+                background-color: #e4ecf2;
+            }
+            .hr{
+                border:solid 5px;
+            }
 		</style>
+
+
+    <script>
+ function toggleBonus() {
+      const content = document.getElementById("bonus-content");
+      const button = document.getElementById("moreinfromation");
+
+
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "flex";
+        button.textContent = "see less";
+      } else {
+        content.style.display = "none";
+        button.textContent = "see more!";
+      }
+    }
+
+    </script>
     </head>
 <body>
 <h1><b>- Park city -</b></h1>
 <hr>
 <h2><em>overview...</em></h2>
 <div class="overview">
-    Park City is a popular tourisat place in Utah known for its impressive buildings, skiing and vibrant atmosphere. It sits at the top of some mountains which is why its a great place for skiing. The city seems to appreciate art considering the fact that they host a film festival every year and other fun events.
+    Park City is a popular tourist place in Utah known for its impressive buildings, skiing and vibrant atmosphere. It sits at the top of some mountains which is why its a great place for skiing. The city seems to appreciate art considering the fact that they host a film festival every year and other fun events.
 </div>
+<h2>why to visit..</h2>>
+<ul>
+    <li>The location makes it perfect for skiing</li>
+    <li>has held the olympics before</li>
+    <li>Lots of great hiking trails</li>
+    <li>Its Main street holds lots of history</li>
+</ul>
+<button id="text" onclick="showHide()">
+    see more
+</button>
+<div id="seemore">
+<ul>
+    <li>The park city museum</li>
+    <li>appreication for music</li>
+    <li>community events like markets</li>
+    <li>beautiful scenery</li>
+</ul>
+</div>
+
+<hr>
+<img src="pic1.jpg" alt="pic1" class="pic1" id="pic1">
+
 </body>
 </html>
