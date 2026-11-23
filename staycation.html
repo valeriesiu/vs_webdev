@@ -6,8 +6,10 @@
 		<style>
             body{
                 background-color:#e9eaf7;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                
             }
+
             h1{
                 text-align: center;
                 color:#5a5769;
@@ -19,13 +21,22 @@
                 color:#65686e;
             }
             .overview{
-                color:#65686e;                text-align:center;
+                color:#65686e;                
+                text-align:center;
                 padding-left:200px;
                 padding-right:200px;
                 font-family:Georgia, 'Times New Roman', Times, serif;
-                
+            .ul{
+                text-align: ;
+            }
             }   
             .pic1{
+                width:250px;
+                border:solid #cccacf;
+                border-width:5px;
+                border-radius: 5%;
+            }
+            .pic2{
                 width:250px;
                 border:solid #cccacf;
                 border-width:5px;
@@ -35,7 +46,6 @@
                 display: none;
             }
 
-            
             .hotels{
                 padding-right:85%;
             }
@@ -47,6 +57,31 @@
             }
             .hr{
                 border:solid 5px;
+            }
+            .city{
+                 width:500px;
+                border:solid #cccacf;
+                border-width:5px;
+                border-radius: 5%;
+                flex-direction:row;
+                margin-left:30%;
+
+            }
+            .city2{
+
+              width:500px;
+                border:solid #cccacf;
+                border-width:5px;
+                border-radius: 5%;
+                flex-direction:row;
+                margin-left:10%;
+            }
+         .ski{
+
+            width:500px;
+
+            border-radius: 5%;
+            margin-left:30%;
             }
 		</style>
 
@@ -63,6 +98,25 @@
                     item.style.display = "block"
                     document.getElementById("button").innerHTML = "show less"
                 }
+            }
+let images = [
+            "pic1.jpg",
+            "pic2.jpg"
+            ]
+
+
+            let currentimage = 0
+
+
+            function rotate(){
+                currentimage = 1
+                document.getElementById("city").src = images[currentimage]
+            }
+
+
+            function rotateBack(){
+                currentimage = 0
+                document.getElementById("city").src = images[currentimage]
             }
 
     </script>
@@ -95,7 +149,17 @@
 </div>
 
 <hr>
-<img src="pic1.jpg" alt="pic1" class="pic1" id="pic1">
 
+
+<img src="pic1.jpg" alt="city" class="city" id="city"
+    onmouseover="rotate()" onmouseout="rotateBack()">
+<hr>
+<div class="normpic">
+    <img src="normpic.jpg" alt="city2" class="city2" id="city2"
+</div>
+<hr>
+<div class="ski">
+    <img src="ski.jpg" alt="ski" class="ski" id="ski"
+</div>
 </body>
 </html>
