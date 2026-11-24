@@ -3,22 +3,29 @@
     <head>
 <title>Staycation Final</title>
         <meta charset="UTF-8">
-		<style>
+    <style>
             body{
                 background-color:#e9eaf7;
                 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                padding: 20px;
             }
+
 
             h1{
                 text-align: center;
                 color:#5a5769;
                 letter-spacing: 5px;
                 font-size:50px;
+                
             }
             h2{
                 text-align: center;
                 color:#65686e;
+              
             }
             .overview{
                 color:#65686e;                
@@ -26,74 +33,57 @@
                 padding-left:200px;
                 padding-right:200px;
                 font-family:Georgia, 'Times New Roman', Times, serif;
-            .ul{
-                text-align: ;
-            }
-            }   
-            .pic1{
-                width:250px;
-                border:solid #cccacf;
-                border-width:5px;
-                border-radius: 5%;
-            }
-            .pic2{
-                width:250px;
-                border:solid #cccacf;
-                border-width:5px;
-                border-radius: 5%;
-            }
-            .seemore{
+            }  
+            #seemore{
                 display: none;
-            }
-
-            .hotels{
-                padding-right:85%;
+                margin-top: 15px;
             }
             #button{
                 background-color: #f4f0f5;
-                border: solid 2px;
+                border: solid 2px #5a5769;
                 border-radius: 10%;
-                color:#5a5769
-            }
-            .hr{
-                border:solid 5px;
-            }
+                color:#5a5769;
+               padding:5px;
+             }
+            
             .city{
-                 width:500px;
-                border:solid #cccacf;
-                border-width:5px;
+                width: 500px;
                 border-radius: 5%;
-                flex-direction:row;
-                margin-left:30%;
-
+                margin-top:30px;
             }
             .city2{
-
-              width:500px;
-                border:solid #cccacf;
-                border-width:5px;
+                width: 500px;
+                border: solid #cccacf 5px;
                 border-radius: 5%;
-                flex-direction:row;
-                margin-left:10%;
+                margin:30px;
             }
-         .ski{
-
-            width:500px;
-
-            border-radius: 5%;
-            margin-left:30%;
+            .ski{
+                width: 500px;
+              border: solid #cccacf 5px;
+                border-radius: 5%;
             }
-		</style>
-
+            .flex{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20%;
+                margin: 5% 0;
+          }
+            .list{
+                display: flex;
+                flex-direction: column;
+            }
+    </style>
 
     <script>
  function showHide(){
                 let item = document.getElementById("seemore")
 
-
-                if(item.style.display == "block"){
+             if(item.style.display == "block"){
                     item.style.display = "none"
-                    document.getElementById("button").innerHTML = "show more!"
+                    document.getElementById("button").innerHTML = "see more!!"
                 }else{
                     item.style.display = "block"
                     document.getElementById("button").innerHTML = "show less"
@@ -103,21 +93,18 @@ let images = [
             "pic1.jpg",
             "pic2.jpg"
             ]
-
-
             let currentimage = 0
-
 
             function rotate(){
                 currentimage = 1
                 document.getElementById("city").src = images[currentimage]
             }
 
-
             function rotateBack(){
                 currentimage = 0
                 document.getElementById("city").src = images[currentimage]
             }
+
 
     </script>
     </head>
@@ -128,6 +115,9 @@ let images = [
 <div class="overview">
     Park City is a popular tourist place in Utah known for its impressive buildings, skiing and vibrant atmosphere. It sits at the top of some mountains which is why its a great place for skiing. The city seems to appreciate art considering the fact that they host a film festival every year and other fun events.
 </div>
+
+<div class="flex">
+<div class="list">
 <h2>why to visit..</h2>
 <ul>
     <li>The location makes it perfect for skiing</li>
@@ -147,19 +137,20 @@ let images = [
     <li>beautiful scenery</li>
 </ul>
 </div>
-
-<hr>
-
+</div>
 
 <img src="pic1.jpg" alt="city" class="city" id="city"
     onmouseover="rotate()" onmouseout="rotateBack()">
-<hr>
-<div class="normpic">
-    <img src="normpic.jpg" alt="city2" class="city2" id="city2"
 </div>
+
 <hr>
-<div class="ski">
-    <img src="ski.jpg" alt="ski" class="ski" id="ski"
+<div class="flex">
+<div class="normpic">
+    <img src="normpic.jpg" alt="city2" class="city2" id="city2">
+</div>
+<div>
+    <img src="ski.jpg" alt="ski" class="ski" id="ski">
+</div>
 </div>
 </body>
 </html>
